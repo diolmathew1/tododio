@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post" class="p-3 shadow">
+                 {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="task" placeholder="Enter task">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="priority" placeholder="Enter Priority">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" name="date" placeholder="Enter Date">
+                </div>
+                <input type="submit" align="center" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{movie.year}}
+{% endblock %}

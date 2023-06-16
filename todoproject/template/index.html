@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container"><br>
+            <div class="shadow card">
+                            <a href="add/" class="btn btn-primary">Add task</a>
+            </div><br>
+    <div class="row">
+        <h6>Tasks to be completed</h6>
+        {% for i in task %}
+        <div class="col-md-6">
+            <div class="shadow card">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.name}}</h5>
+                    <h5 class="card-title">Priority : {{i.priority}}</h5>
+                    <h5 class="card-title">{{i.date}}</h5>
+                    <a class="btn btn-danger" href="delete/{{i.id}}">Done</a>
+                    <a class="btn btn-success" href="update/{{i.id}}">Update</a><br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
